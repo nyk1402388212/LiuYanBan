@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>liuYanBan</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>home</welcome-file>
+  </welcome-file-list>
+  
+ <!-- home -->
+  <servlet>
+  <servlet-name>home</servlet-name>
+  <servlet-class>com.mi.homeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>home</servlet-name>
+  <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet><!--添加留言到数据库 -->
+  <servlet-name>add</servlet-name>
+  <servlet-class>com.mi.addServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>add</servlet-name>
+  <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+    <servlet><!--跳转到首页 -->
+  <servlet-name>first</servlet-name>
+  <servlet-class>com.mi.firstServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>first</servlet-name>
+  <url-pattern>/first</url-pattern>
+  </servlet-mapping>
+  
+  
+      <servlet><!--跳转到尾页 -->
+  <servlet-name>last</servlet-name>
+  <servlet-class>com.mi.lastServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>last</servlet-name>
+  <url-pattern>/last</url-pattern>
+  </servlet-mapping>
+  
+   <servlet><!--上一页 -->
+  <servlet-name>priorServlet</servlet-name>
+  <servlet-class>com.mi.priorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>priorServlet</servlet-name>
+  <url-pattern>/prior</url-pattern>
+  </servlet-mapping>
+  
+  
+     <servlet><!--下一页 -->
+  <servlet-name>nextServlet</servlet-name>
+  <servlet-class>com.mi.nextServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>nextServlet</servlet-name>
+  <url-pattern>/next</url-pattern>
+  </servlet-mapping>
+  
+     <servlet><!--页数下拉选择 -->
+  <servlet-name>skipServlet</servlet-name>
+  <servlet-class>com.mi.skipServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>skipServlet</servlet-name>
+  <url-pattern>/skip</url-pattern>
+  </servlet-mapping>
+  
+       <servlet><!--回复 -->
+  <servlet-name>answerServlet</servlet-name>
+  <servlet-class>com.mi.answerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>answerServlet</servlet-name>
+  <url-pattern>/answer</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+</web-app>
